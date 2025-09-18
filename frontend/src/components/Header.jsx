@@ -23,7 +23,6 @@ const Header = ({ cartItems = [], user, onLogout }) => {
     { name: 'Início', href: '/' },
     { name: 'Cardápio', href: '/cardapio' },
     { name: 'Monte seu Burger', href: '/monte-seu-burger' },
-    { name: 'Promoções', href: '/promocoes' },
     { name: 'Contato', href: '/contato' }
   ];
 

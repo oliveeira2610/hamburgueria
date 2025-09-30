@@ -78,7 +78,7 @@ const Cart = ({ cartItems, onUpdateQuantity, onRemoveItem, onClearCart, user, to
         }))
       };
 
-      const response = await fetch('http://localhost:3001/api/orders', {
+      const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

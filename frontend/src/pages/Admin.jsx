@@ -44,7 +44,7 @@
 
 //   const fetchProducts = async () => {
 //     try {
-//       const response = await fetch('http://localhost:3001/api/products');
+//       const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/products');
 //       const data = await response.json();
 //       setProducts(data);
 //     } catch (error) {
@@ -54,7 +54,7 @@
 
 //   const fetchCategories = async () => {
 //     try {
-//       const response = await fetch('http://localhost:3001/api/categories');
+//       const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/categories');
 //       const data = await response.json();
 //       setCategories(data);
 //     } catch (error) {
@@ -64,7 +64,7 @@
 
 //   const fetchOrders = async () => {
 //     try {
-//       const response = await fetchWithAuth('http://localhost:3001/api/orders');
+//       const response = await fetchWithAuth('https://hamburgueria-api-lbm4.onrender.com/api/orders');
 //       const data = await response.json();
 //       if (Array.isArray(data)) {
 //         setOrders(data);
@@ -80,7 +80,7 @@
 
 // const fetchOrderDetails = async (orderId) => {
 //   try {
-//     const response = await fetchWithAuth(`http://localhost:3001/api/orders/${orderId}`);
+//     const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/orders/${orderId}`);
 //     const data = await response.json();
 //     console.log('orderDetails:', data); // <--- veja se vem customer_cpf
 //     setOrderDetails(data);
@@ -99,7 +99,7 @@
 
 //   const fetchUsers = async () => {
 //     try {
-//       const response = await fetchWithAuth('http://localhost:3001/api/users');
+//       const response = await fetchWithAuth('https://hamburgueria-api-lbm4.onrender.com/api/users');
 //       const data = await response.json();
 //       setUsers(data);
 //     } catch (error) {
@@ -111,8 +111,8 @@
 //     e.preventDefault();
 //     try {
 //       const url = editingProduct 
-//         ? `http://localhost:3001/api/products/${editingProduct.id}`
-//         : 'http://localhost:3001/api/products';
+//         ? `https://hamburgueria-api-lbm4.onrender.com/api/products/${editingProduct.id}`
+//         : 'https://hamburgueria-api-lbm4.onrender.com/api/products';
       
 //       const method = editingProduct ? 'PUT' : 'POST';
       
@@ -161,7 +161,7 @@
 //   const handleDeleteProduct = async (productId) => {
 //     if (window.confirm('Tem certeza que deseja excluir este produto?')) {
 //       try {
-//         const response = await fetchWithAuth(`http://localhost:3001/api/products/${productId}`, {
+//         const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/products/${productId}`, {
 //           method: 'DELETE'
 //         });
 
@@ -180,7 +180,7 @@
 
 //   const handleUpdateOrderStatus = async (orderId, newStatus) => {
 //     try {
-//       const response = await fetchWithAuth(`http://localhost:3001/api/orders/${orderId}/status`, {
+//       const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/orders/${orderId}/status`, {
 //         method: 'PUT',
 //         body: JSON.stringify({ status: newStatus })
 //       });
@@ -204,7 +204,7 @@
 //   const handleUpdateUserRole = async (userId, newRole) => {
 //     if (window.confirm(`Tem certeza que deseja ${newRole === 'admin' ? 'promover' : 'rebaixar'} este usuário?`)) {
 //       try {
-//         const response = await fetchWithAuth(`http://localhost:3001/api/users/${userId}/role`, {
+//         const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/users/${userId}/role`, {
 //           method: 'PUT',
 //           body: JSON.stringify({ role: newRole })
 //         });
@@ -948,7 +948,7 @@ const Admin = ({ user, token }) => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/products');
+      const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/products');
       const data = await response.json();
       setProducts(data);
     } catch (error) {
@@ -958,7 +958,7 @@ const Admin = ({ user, token }) => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/categories');
+      const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/categories');
       const data = await response.json();
       setCategories(data);
     } catch (error) {
@@ -968,7 +968,7 @@ const Admin = ({ user, token }) => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetchWithAuth('http://localhost:3001/api/orders');
+      const response = await fetchWithAuth('https://hamburgueria-api-lbm4.onrender.com/api/orders');
       const data = await response.json();
       if (Array.isArray(data)) {
         setOrders(data);
@@ -984,7 +984,7 @@ const Admin = ({ user, token }) => {
 
   const fetchOrderDetails = async (orderId) => {
     try {
-      const response = await fetchWithAuth(`http://localhost:3001/api/orders/${orderId}`);
+      const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/orders/${orderId}`);
       const data = await response.json();
       setOrderDetails(data);
       setShowOrderModal(true);
@@ -996,7 +996,7 @@ const Admin = ({ user, token }) => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetchWithAuth('http://localhost:3001/api/users');
+      const response = await fetchWithAuth('https://hamburgueria-api-lbm4.onrender.com/api/users');
       const data = await response.json();
       setUsers(data);
     } catch (error) {
@@ -1008,8 +1008,8 @@ const Admin = ({ user, token }) => {
     e.preventDefault();
     try {
       const url = editingProduct 
-        ? `http://localhost:3001/api/products/${editingProduct.id}`
-        : 'http://localhost:3001/api/products';
+        ? `https://hamburgueria-api-lbm4.onrender.com/api/products/${editingProduct.id}`
+        : 'https://hamburgueria-api-lbm4.onrender.com/api/products';
       
       const method = editingProduct ? 'PUT' : 'POST';
       
@@ -1058,7 +1058,7 @@ const Admin = ({ user, token }) => {
   const handleDeleteProduct = async (productId) => {
     if (window.confirm('Tem certeza que deseja excluir este produto?')) {
       try {
-        const response = await fetchWithAuth(`http://localhost:3001/api/products/${productId}`, {
+        const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/products/${productId}`, {
           method: 'DELETE'
         });
 
@@ -1077,7 +1077,7 @@ const Admin = ({ user, token }) => {
 
   const handleUpdateOrderStatus = async (orderId, newStatus) => {
     try {
-      const response = await fetchWithAuth(`http://localhost:3001/api/orders/${orderId}/status`, {
+      const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/orders/${orderId}/status`, {
         method: 'PUT',
         body: JSON.stringify({ status: newStatus })
       });
@@ -1100,7 +1100,7 @@ const Admin = ({ user, token }) => {
   const handleUpdateUserRole = async (userId, newRole) => {
     if (window.confirm(`Tem certeza que deseja ${newRole === 'admin' ? 'promover' : 'rebaixar'} este usuário?`)) {
       try {
-        const response = await fetchWithAuth(`http://localhost:3001/api/users/${userId}/role`, {
+        const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/users/${userId}/role`, {
           method: 'PUT',
           body: JSON.stringify({ role: newRole })
         });
@@ -1149,7 +1149,7 @@ const Admin = ({ user, token }) => {
 
   const fetchDashboardStats = async (period = 'total') => {
   try {
-    const response = await fetchWithAuth(`http://localhost:3001/api/dashboard/stats?period=${period}`);
+    const response = await fetchWithAuth(`https://hamburgueria-api-lbm4.onrender.com/api/dashboard/stats?period=${period}`);
     const data = await response.json();
     setDashboardStats(data);
   } catch (error) {

@@ -13,7 +13,7 @@ const CustomBurger = ({ onAddToCart }) => {
 
   const fetchIngredients = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/ingredients');
+      const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/ingredients');
       const data = await response.json();
       setIngredients(data);
       setLoading(false);

@@ -26,7 +26,7 @@ function App() {
       if (savedToken && savedUser) {
         try {
           // Verificar se o token ainda é válido
-          const response = await fetch('http://localhost:3001/api/auth/verify', {
+          const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/auth/verify', {
             headers: {
               'Authorization': `Bearer ${savedToken}`
             }

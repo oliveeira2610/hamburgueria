@@ -119,7 +119,7 @@ const Register = ({ onLogin }) => {
     try {
       const { confirmPassword, ...dataToSend } = formData;
       
-      const response = await fetch('http://localhost:3001/api/auth/register', {
+      const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

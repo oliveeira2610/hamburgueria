@@ -15,7 +15,7 @@ const Menu = ({ onAddToCart }) => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/categories');
+      const response = await fetch('https://hamburgueria-api-lbm4.onrender.com/api/categories');
       const data = await response.json();
       setCategories(data);
     } catch (error) {
@@ -26,8 +26,8 @@ const Menu = ({ onAddToCart }) => {
   const fetchProducts = async () => {
     try {
       const url = selectedCategory === 'all' 
-        ? 'http://localhost:3001/api/products'
-        : `http://localhost:3001/api/products?category_id=${selectedCategory}`;
+        ? 'https://hamburgueria-api-lbm4.onrender.com/api/products'
+        : `https://hamburgueria-api-lbm4.onrender.com/api/products?category_id=${selectedCategory}`;
       
       const response = await fetch(url);
       const data = await response.json();
